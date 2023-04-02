@@ -3,68 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Inball</title>
-    <style>
-        /* Hide scrollbars for chrome */
-        ::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Hide scrollbars for IE and Edge */
-        ::-ms-overflow-style {
-            display: none;
-        }
-
-        /* Hide scrollbars for firefox */
-        ::-moz-scrollbar {
-            display: none;
-        }
-
-        .logo-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-            -webkit-overflow-scrolling: touch;
-            overflow-x: auto;
-        }
-
-        .logo-container>* {
-            flex-shrink: 0;
-            flex-grow: 0;
-        }
-
-        .logo-container img {
-            margin: 0px 10px;
-        }
-
-        @media screen and (max-width: 1439px) {
-            .logo-container img {
-                height: 30px;
-            }
-
-            .logo-container span {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            .logo-container img {
-                height: 20px;
-            }
-
-            .logo-container span {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" />
 </head>
 
 <body>
+    <!-- Navigation bar and Logo Club -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <div class="row overflow-hidden">
@@ -86,7 +35,7 @@
                             </div>
                         </a>
                         <a target="_blank" href="https://www.avfc.co.uk/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-          " role="menuitem">
+            " role="menuitem">
                             <div>
                                 <img src="https://resources.premierleague.com/premierleague/badges/50/t7.png"
                                     srcset="https://resources.premierleague.com/premierleague/badges/50/t7@x2.png 2x">
@@ -191,7 +140,7 @@
                             </div>
                         </a>
                         <a target="_blank" href="http://www.tottenhamhotspur.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-          " role="menuitem">
+            " role="menuitem">
                             <div>
                                 <img src="https://resources.premierleague.com/premierleague/badges/50/t6.png"
                                     srcset="https://resources.premierleague.com/premierleague/badges/50/t6@x2.png 2x">
@@ -205,7 +154,7 @@
                             </div>
                         </a>
                         <a target="_blank" href="https://www.wolves.co.uk/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-          " role="menuitem">
+            " role="menuitem">
                             <div>
                                 <img src="https://resources.premierleague.com/premierleague/badges/50/t39.png"
                                     srcset="https://resources.premierleague.com/premierleague/badges/50/t39@x2.png 2x">
@@ -227,177 +176,248 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Live</a>
+                            <a class="nav-link" href="./live.html">Live</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Highlights</a>
+                            <a class="nav-link" href="./highlights.html">Highlights</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Klasemen</a>
+                            <a class="nav-link" href="./klasemen.html">Klasemen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">FAQ</a>
+                            <a class="nav-link" href="./faq.html">FAQ</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-
-    <!-- Main Content -->
-    <div class="container my-4">
-        <h1 class="text-center mb-4">Video Highlight Sepak Bola</h1>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://i.ytimg.com/vi/9v5Oo6Mtu_4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEogZSgpMA8=&rs=AOn4CLCTJGhkUbl7i6cnZ7g48Yc3_rC53w"
-                        alt="Video Thumbnail">
+            <div class="col-12 col-md-4">
+                <!-- Highlight Terkini -->
+                <div class="card mb-3">
+                    <img src="https://e0.365dm.com/23/04/768x432/skysports-willock-newcastle_6108611.jpg?20230402182254"
+                        class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Snapshot - West's Josh Gore soccers & goals</h5>
-                        <p class="card-text">
-                        </p>
-                        <a data-toggle="modal" data-target="#videoModal" class="btn btn-primary">Watch Now</a>
+                        <h5 class="card-title">Highlight Terkini</h5>
+                        <p class="card-text">Newcastle leapfrog Man Utd with dominant win</p>
+                        <a class="card-text"
+                            href="https://www.skysports.com/football/news/11661/12643784/premier-league-table-with-live-updates-as-the-goals-go-in">Live
+                            Premier League table</a>
                     </div>
-                    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog"
-                        aria-labelledby="videoModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-video" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/9v5Oo6Mtu_4" frameborder="0"
-                                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <!-- Best Player -->
+                        <div class="card mb-3">
+                            <img src="https://media.guim.co.uk/eb9f71303753292960212576e6db123d99138a96/0_23_3500_2101/500.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Best Player</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <!-- Tabel Skor dan Logo Liga -->
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title justify-content-center align-items-center"></h5>
+                                        <p class="card-text"></p>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="d-flex justify-content-center align-items-center mb-3">
+                                                        <h5>Skor Pertandingan</h5>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <img src="https://img.bundesliga.com/tachyon/sites/2/2022/06/Frankfurt-SGE.png?fit=70,70"
+                                                            class="mr-2">
+                                                        <h3>1 - 1</h3>
+                                                        <img src="https://img.bundesliga.com/tachyon/sites/2/2021/08/Bochum.png?fit=70,70"
+                                                            class="ml-2">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <img src="https://img.bundesliga.com/tachyon/sites/2/2021/08/Leipzig.png?fit=70,70"
+                                                            class="mr-2">
+                                                        <h3>0 - 3</h3>
+                                                        <img src="https://img.bundesliga.com/tachyon/sites/2/2021/08/Mainz.png?fit=70,70"
+                                                            class="ml-2">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/30.png"
+                                                            class="mr-2" width="70px">
+                                                        <h3>5 - 1</h3>
+                                                        <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/217.png"
+                                                            class="ml-2" width="70px">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/209.png"
+                                                            class="mr-2" width="70px">
+                                                        <h3>1 - 3</h3>
+                                                        <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/37.png"
+                                                            class="ml-2" width="70x">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/12.png"
+                                                            class="mr-2" width="70px">
+                                                        <h3>2 - 0</h3>
+                                                        <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/11.png"
+                                                            class="ml-2" width="70px">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://i.ytimg.com/vi/_qW63-L8hhM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFwgZSg-MA8=&rs=AOn4CLAcSvtY_u8JVuSKyWGYIfmQt-tYjw"
-                        alt="Video Thumbnail">
+                <!-- Tabel Schedule -->
+                <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title">Round 1 Torrens University U18 MVP - Patrick Toole (Eagles)</h5>
-                        <p class="card-text">
-                        </p>
-                        <a href="#" class="btn btn-primary">Watch Now</a>
-                    </div>
-                    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog"
-                        aria-labelledby="videoModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-video" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/9v5Oo6Mtu_4" frameborder="0"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top" src="https://i.ytimg.com/vi/Ps_wR4jM7J4/maxresdefault.jpg"
-                        alt="Video Thumbnail">
-                    <div class="card-body">
-                        <h5 class="card-title">Paris Saint-Germain vs Bayern Munich</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus
-                            lacus nec purus congue tincidunt. Mauris luctus, nibh non congue malesuada, dolor sapien
-                            fringilla justo, et dapibus lacus lorem ut orci. Sed ullamcorper enim eget lacinia suscipit.
-                        </p>
-                        <a href="#" class="btn btn-primary">Watch Now</a>
+                        <h5 class="card-title">Klasemen Sementara</h5>
+                        <p class="card-text text-center">Liga Inggris</p>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Team</th>
+                                    <th scope="col">M</th>
+                                    <th scope="col">W</th>
+                                    <th scope="col">+/-</th>
+                                    <th scope="col">P</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Arsenal</td>
+                                    <td>29</td>
+                                    <td>23</td>
+                                    <td>43</td>
+                                    <td>72</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Man City</td>
+                                    <td>28</td>
+                                    <td>20</td>
+                                    <td>45</td>
+                                    <td>64</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Man United</td>
+                                    <td>26</td>
+                                    <td>15</td>
+                                    <td>6</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Tottenham</td>
+                                    <td>28</td>
+                                    <td>15</td>
+                                    <td>12</td>
+                                    <td>49</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Newcastle</td>
+                                    <td>26</td>
+                                    <td>12</td>
+                                    <td>20</td>
+                                    <td>47</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <hr>
+                        <p class="card-text text-center">Liga Italia</p>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Team</th>
+                                    <th scope="col">M</th>
+                                    <th scope="col">W</th>
+                                    <th scope="col">+/-</th>
+                                    <th scope="col">P</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Napoli</td>
+                                    <td>27</td>
+                                    <td>23</td>
+                                    <td>48</td>
+                                    <td>71</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Lazio</td>
+                                    <td>28</td>
+                                    <td>16</td>
+                                    <td>25</td>
+                                    <td>55</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>Inter Milan</td>
+                                    <td>28</td>
+                                    <td>16</td>
+                                    <td>15</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <th>4</th>
+                                    <td>AS Roma</td>
+                                    <td>28</td>
+                                    <td>15</td>
+                                    <td>12</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <th>5</th>
+                                    <td>AC Milan</td>
+                                    <td>27</td>
+                                    <td>14</td>
+                                    <td>8</td>
+                                    <td>48</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <!-- Footer -->
 </body>
 <footer class="bg-dark text-white py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Website Sepak Bola</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus lacus nec purus congue
-                    tincidunt. Mauris luctus, nibh non congue malesuada, dolor sapien fringilla justo, et dapibus
-                    lacus lorem ut orci. Sed ullamcorper enim eget lacinia suscipit.</p>
-            </div>
-            <div class="col-md-6">
-                <h3>Follow Us</h3>
-                <ul class="list-unstyled">
-                    <li><a href="#"><i class="fa fa-facebook fa-lg mr-3"></i>Facebook</a></li>
-                    <li><a href="#"><i class="fa fa-twitter fa-lg mr-3"></i>Twitter</a></li>
-                    <li><a href="#"><i class="fa fa-instagram fa-lg mr-3"></i>Instagram</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .btn-play {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            color: #fff;
-            cursor: pointer;
-            z-index: 1;
-        }
-
-        .modal-video {
-            overflow: hidden;
-        }
-
-        .modal-video .modal-dialog {
-            max-width: 800px;
-        }
-    </style>
-    <script>
-        $(function () {
-            $('.logo-container').on('mousewheel DOMMouseScroll', function (e) {
-                var scrollTo = null;
-                if (e.type == 'mousewheel') {
-                    scrollTo = (e.originalEvent.wheelDelta * -1);
-                } else if (e.type == 'DOMMouseScroll') {
-                    scrollTo = 40 * e.originalEvent.detail;
-                }
-                if (scrollTo) {
-                    e.preventDefault();
-                    $(this).scrollLeft(scrollTo + $(this).scrollLeft());
-                }
-            });
-        });
-
-    </script>
-    <script src="js/jquery-3.6.3.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <!-- Data yang relevant -->
+    <footer-component></footer-component>
 </footer>
+
+<!-- Custom Java Script -->
+<script src="js/components.js"></script>
+
+<!-- jQuery, Popper.js, Bootstrap JS -->
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
 
 </html>
