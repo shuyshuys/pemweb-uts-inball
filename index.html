@@ -1,520 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <title>Login InBall</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" />
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap 4 JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // saat tombol login ditekan
+            $("#btn-login").click(function () {
+                // validasi username dan password
+                if ($("#username").val() == "" || $("#password").val() == "") {
+                    alert("Username dan Password harus diisi");
+                } else {
+                    // jika username dan password benar
+                    if ($("#username").val() == "admin" && $("#password").val() == "admin123") {
+                        // arahkan ke halaman dashboard
+                        window.location.href = "./homepage.html";
+                    } else {
+                        alert("Username atau Password salah");
+                    }
+                }
+            });
+
+            // fade out form saat tombol login atau register ditekan
+            $("#btn-login, #btn-register").click(function () {
+                $("#login-form").fadeOut();
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <!-- Navigation bar and Logo Club -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <div class="row overflow-hidden">
-                <div class="col-auto">
-                    <div class="logo-container">
-                        <span>Club Site</span>
-                        <a target="_blank" href="https://www.afcb.co.uk/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-        " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t91.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t91@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="http://www.arsenal.com?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t3.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t3@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.avfc.co.uk/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-            " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t7.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t7@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.brentfordfc.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t94.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t94@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.brightonandhovealbion.com?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t36.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t36@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.chelseafc.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t8.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t8@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="http://www.cpfc.co.uk/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t31.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t31@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="http://www.evertonfc.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t11.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t11@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.fulhamfc.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t54.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t54@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.leedsunited.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t2.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t2@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="http://www.lcfc.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t13.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t13@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="http://www.liverpoolfc.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t14.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t14@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.mancity.com?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t43.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t43@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="http://www.manutd.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t1.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t1@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.nufc.co.uk/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t4.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t4@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.nottinghamforest.co.uk/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t17.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t17@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.southamptonfc.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t20.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t20@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="http://www.tottenhamhotspur.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-            " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t6.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t6@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="http://www.whufc.com/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-    " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t21.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t21@x2.png 2x">
-                            </div>
-                        </a>
-                        <a target="_blank" href="https://www.wolves.co.uk/?utm_source=premier-league-website&amp;utm_campaign=website&amp;utm_medium=link
-            " role="menuitem">
-                            <div>
-                                <img src="https://resources.premierleague.com/premierleague/badges/50/t39.png"
-                                    srcset="https://resources.premierleague.com/premierleague/badges/50/t39@x2.png 2x">
-                            </div>
-                        </a>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Login InBall</h4>
                     </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span> InBall
-                </button>
-                <span class="d-none d-lg-block ms-2">InBall</span>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./live.html">Live</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./highlights.html">Highlights</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./klasemen.html">Klasemen</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./faq.html">FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <!-- Highlight Terkini -->
-                <div class="card mb-2">
-                    <img src="https://e0.365dm.com/23/04/768x432/skysports-willock-newcastle_6108611.jpg?20230402182254"
-                        class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h3 class="card-title">Highlight Terkini</h3>
-                        <p class="card-text">Newcastle leapfrog Man Utd with dominant win</p>
-                        <a class="card-text"
-                            href="https://www.skysports.com/football/news/11661/12643784/premier-league-table-with-live-updates-as-the-goals-go-in">Live
-                            Premier League table</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <!-- Highlight Terkini -->
-                <div class="card mb-2">
-                    <img src="https://e0.365dm.com/23/04/768x432/skysports-willock-newcastle_6108611.jpg?20230402182254"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">Highlight Terkini</h3>
-                        <p class="card-text">Newcastle leapfrog Man Utd with dominant win</p>
-                        <a class="card-text"
-                            href="https://www.skysports.com/football/news/11661/12643784/premier-league-table-with-live-updates-as-the-goals-go-in">Live
-                            Premier League table</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-12">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <!-- Best Player -->
-                        <div class="card mb-2">
-                            <h5 class="card-title mx-auto mt-2">Best Player</h5>
-                            <img src="https://media.guim.co.uk/eb9f71303753292960212576e6db123d99138a96/0_23_3500_2101/500.jpg"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h3>Robert LewandoRobert Lewandowskiwski</h3>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <th>Age</th>
-                                            <td>33</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Team</th>
-                                            <td>Bayern Munich / Poland</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Position</th>
-                                            <td>Forward</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Rank</th>
-                                            <td>1 (2020)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <hr>
-                                <p class="card-text">The Pole becomes the first player to retain top spot since Lionel
-                                    Messi in 2013, featuring on every judges’ list this year and topping 115 out of 219
-                                    votes cast. And it's no surprise – his goalscoring feats continue to defy logic. By
-                                    mid-December he had scored 66 goals in 57 competitive games for club and country. At
-                                    the end of the 2020-21 season he won his seventh Bundesliga title but Bayern were
-                                    not able to repeat their Champions League triumph, going out to Paris Saint-Germain
-                                    in the quarter-finals; tellingly Lewandowski was injured for the two games against
-                                    the French side. The Bayern Munich manager, Julian Nagelsmann, says: “I think Lewy
-                                    can achieve a lot, also at an older age, because of his physique, lifestyle and the
-                                    way he lives as a footballer.” He is destined to be back on the list next year,
-                                    possibly as a winner for a third consecutive year. Marcus Christenson</p>
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username">
                             </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                            <button type="button" class="btn btn-primary" id="btn-login">Login</button>
+                        </form>
+                        <div class="mt-3">
+                            <p>Belum punya akun? <a href="#" id="btn-register">Hubungi
+                                    admin</a></p>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <!-- Best Player -->
-                        <div class="card mb-2">
-                            <h5 class="card-title mx-auto mt-2">Best Player</h5>
-                            <img src="https://media.guim.co.uk/93b20af79ece9134319fcfa8ae5ef245441c578f/0_123_2048_1229/500.jpg"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h3>Lionel Messi</h3>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <th>Age</th>
-                                            <td>34</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Team</th>
-                                            <td>Paris Saint-Germain / Argentina</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Position</th>
-                                            <td>Forward</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Rank</th>
-                                            <td>2 (2020)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <hr>
-                                <p class="card-text">For many, not least the man himself, this summer’s Copa América
-                                    triumph will have been the defining moment of the Argentinian’s year, perhaps more
-                                    so than his sensational move to PSG or his much-contested Ballon d’Or win. Messi
-                                    nevertheless ended last season as La Liga’s top scorer and won another Copa del Rey,
-                                    propping up a feckless Barcelona and once again justifying his uninterrupted
-                                    presence in this rankings' top three. His time in Paris has been more muted, albeit
-                                    punctuated by moments of magic such as his first goal for the club, against
-                                    Manchester City. His stellar Champions League performances remain the one constant
-                                    from his Catalan years – but PSG won’t mind that if he can propel them to the big
-                                    prize next year. Raphaël Jucobin</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-12 col-md-5 col-lg-3">
-                <!-- Tabel Skor dan Logo Liga -->
-                <div class="card mb-2">
-                    <div class="row no-gutters">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title justify-content-center align-items-center"></h5>
-                                <p class="card-text"></p>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="d-flex justify-content-center align-items-center mb-2">
-                                                <h5>Skor Pertandingan</h5>
-                                            </div>
-                                            <div class="d-flex justify-content-center align-items-center">
-                                                <img src="https://img.bundesliga.com/tachyon/sites/2/2022/06/Frankfurt-SGE.png?fit=70,70"
-                                                    class="mr-2">
-                                                <h3>1 - 1</h3>
-                                                <img src="https://img.bundesliga.com/tachyon/sites/2/2021/08/Bochum.png?fit=70,70"
-                                                    class="ml-2">
-                                            </div>
-                                            <div class="d-flex justify-content-center align-items-center">
-                                                <img src="https://img.bundesliga.com/tachyon/sites/2/2021/08/Leipzig.png?fit=70,70"
-                                                    class="mr-2">
-                                                <h3>0 - 3</h3>
-                                                <img src="https://img.bundesliga.com/tachyon/sites/2/2021/08/Mainz.png?fit=70,70"
-                                                    class="ml-2">
-                                            </div>
-                                            <div class="d-flex justify-content-center align-items-center">
-                                                <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/30.png"
-                                                    class="mr-2" width="70px">
-                                                <h3>5 - 1</h3>
-                                                <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/217.png"
-                                                    class="ml-2" width="70px">
-                                            </div>
-                                            <div class="d-flex justify-content-center align-items-center">
-                                                <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/209.png"
-                                                    class="mr-2" width="70px">
-                                                <h3>1 - 3</h3>
-                                                <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/37.png"
-                                                    class="ml-2" width="70x">
-                                            </div>
-                                            <div class="d-flex justify-content-center align-items-center">
-                                                <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/12.png"
-                                                    class="mr-2" width="70px">
-                                                <h3>2 - 0</h3>
-                                                <img src="https://assets.ligaindonesiabaru.com/uploads/images/logo/71/h/50/11.png"
-                                                    class="ml-2" width="70px">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <!-- Tabel Klasemen -->
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Klasemen Sementara</h5>
-                        <p class="card-text text-center">Liga Inggris</p>
-                        <table class="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Team</th>
-                                    <th scope="col">M</th>
-                                    <th scope="col">W</th>
-                                    <th scope="col">+/-</th>
-                                    <th scope="col">P</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Arsenal</td>
-                                    <td>29</td>
-                                    <td>23</td>
-                                    <td>43</td>
-                                    <td>72</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Man City</td>
-                                    <td>28</td>
-                                    <td>20</td>
-                                    <td>45</td>
-                                    <td>64</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Man United</td>
-                                    <td>26</td>
-                                    <td>15</td>
-                                    <td>6</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Tottenham</td>
-                                    <td>28</td>
-                                    <td>15</td>
-                                    <td>12</td>
-                                    <td>49</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Newcastle</td>
-                                    <td>26</td>
-                                    <td>12</td>
-                                    <td>20</td>
-                                    <td>47</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <p class="card-text text-center">Liga Italia</p>
-                        <table class="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Team</th>
-                                    <th scope="col">M</th>
-                                    <th scope="col">W</th>
-                                    <th scope="col">+/-</th>
-                                    <th scope="col">P</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>Napoli</td>
-                                    <td>27</td>
-                                    <td>23</td>
-                                    <td>48</td>
-                                    <td>71</td>
-                                </tr>
-                                <tr>
-                                    <th>2</th>
-                                    <td>Lazio</td>
-                                    <td>28</td>
-                                    <td>16</td>
-                                    <td>25</td>
-                                    <td>55</td>
-                                </tr>
-                                <tr>
-                                    <th>3</th>
-                                    <td>Inter Milan</td>
-                                    <td>28</td>
-                                    <td>16</td>
-                                    <td>15</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <th>4</th>
-                                    <td>AS Roma</td>
-                                    <td>28</td>
-                                    <td>15</td>
-                                    <td>12</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <th>5</th>
-                                    <td>AC Milan</td>
-                                    <td>27</td>
-                                    <td>14</td>
-                                    <td>8</td>
-                                    <td>48</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
-<footer class="bg-dark text-white py-4">
-    <!-- Data yang relevant -->
-    <footer-component></footer-component>
-</footer>
-
-<!-- Custom Java Script -->
-<script src="js/components.js"></script>
-
-<!-- jQuery, Popper.js, Bootstrap JS -->
-<script src="js/jquery-3.6.3.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.js"></script>
 
 </html>
