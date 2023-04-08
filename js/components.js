@@ -163,7 +163,7 @@ class Header extends HTMLElement {
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="./homepage.html">Home</a>
+                            <a class="nav-link" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./live.html">Live</a>
@@ -175,10 +175,13 @@ class Header extends HTMLElement {
                             <a class="nav-link" href="./klasemen.html">Klasemen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./faq.html">FAQ</a>
+                        <a class="nav-link" href="./contactus.html">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Log Out</a>
+                        <a class="nav-link" href="./aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -187,6 +190,7 @@ class Header extends HTMLElement {
     </header>`
     }
 }
+
 class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -214,6 +218,18 @@ class Footer extends HTMLElement {
     }
 }
 
+class FAB extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `    <div class="fixed-bottom d-flex justify-content-end mr-3 mb-3">
+        <a href="login.html" class="btn btn-primary rounded-circle shadow-sm">
+            <i class="fa fa-arrow-right"> Login !</i>
+        </a>
+    </div>
+    `
+    }
+}
+
 
 customElements.define('header-component', Header);
 customElements.define('footer-component', Footer);
+customElements.define('fab-component', FAB);
