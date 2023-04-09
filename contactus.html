@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header-component></header-component>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center mb-4">Contact Us</h1>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <fab-component></fab-component>
+    <br>
+</body>
+<footer class="bg-dark text-white py-4">
+    <footer-component></footer-component>
+</footer>
+
+<!-- Components for header and footer -->
+<script src="js/components.js"></script>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- EmailJS for sending email through form -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function () {
+        // Initialize EmailJS with user ID and service ID
+        emailjs.init("mShU_fq7PdnkRPJ36");
+
+        // Set form submit event listener
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form behavior
+
+            // Get form data
+            const form = this;
+            const name = form.querySelector('#name').value;
+            const email = form.querySelector('#email').value;
+            ww
+            // Send email using EmailJS
+            emailjs.send("service_mcmziw8", "template_gebpcil", {
+                from_name: name,
+                from_email: email,
+                message: message
+            }).then(function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Your message was sent successfully. We will get back to you as soon as possible.");
+                form.reset(); // Reset form
+            }, function (error) {
+                console.log("FAILED...", error);
+                alert("There was an error sending your message. Please try again later.");
+            });
+        });
+    })();
+</script>
+
+</html>
