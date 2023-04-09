@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login InBall</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap 4 JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        alert('username: admin, password: admin123')
+        $(document).ready(function () {
+            // saat tombol login ditekan
+            $("#btn-login").click(function () {
+                // validasi username dan password
+                if ($("#username").val() == "" || $("#password").val() == "") {
+                    alert("Username dan Password harus diisi");
+                } else {
+                    // jika username dan password benar
+                    if ($("#username").val() == "admin" && $("#password").val() == "admin123") {
+                        // arahkan ke halaman dashboard
+                        window.location.href = "./index.html";
+                    } else {
+                        alert("Username atau Password salah");
+                    }
+                }
+            });
+
+            // fade out form saat tombol login atau register ditekan
+            $("#btn-login, #btn-register").click(function () {
+                $("#login-form").fadeOut();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Login InBall</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                            <button type="button" class="btn btn-primary" id="btn-login">Login</button>
+                        </form>
+                        <div class="mt-3">
+                            <p>Belum punya akun? <a href="http://wa.me/685256424239" id="btn-register">Hubungi
+                                    admin</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
