@@ -1,0 +1,77 @@
+* {
+    scrollbar-width: none;
+}
+
+/* Hide scrollbars for chrome */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbars for IE and Edge */
+::-ms-overflow-style {
+    display: none;
+}
+
+/* Hide scrollbars for firefox */
+::-moz-scrollbar {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
+
+.logo-container>* {
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.logo-container img {
+    margin: 0px 10px;
+}
+
+@media screen and (max-width: 1439px) {
+    .logo-container img {
+        height: 30px;
+    }
+
+    .logo-container span {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .logo-container img {
+        height: 20px;
+    }
+
+    .logo-container span {
+        font-size: 1rem;
+    }
+}
+
+img {
+    opacity: 0.8;
+    /* Memberikan opacity 0.8 pada gambar */
+    transition: all 0.5s ease-in-out;
+    /* Menambahkan efek transisi pada semua properti saat di hover selama 0.3 detik */
+    transform: scale(0.8);
+    /* Mengubah ukuran gambar menjadi 0.9 kali lebih kecil */
+}
+
+img:hover {
+    opacity: 1;
+    /* Mengembalikan opacity gambar menjadi 1 saat di hover */
+    transform: scale(1.0);
+    /* Mengubah ukuran gambar menjadi 1.0 kali lebih besar saat di hover */
+}
+
+.table-scroll {
+    max-height: 300px;
+    overflow-y: scroll;
+}
