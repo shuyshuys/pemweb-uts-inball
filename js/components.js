@@ -207,10 +207,11 @@ class Footer extends HTMLElement {
                 </p>
             </div>
             <div class="col-md-4">
-                <h3>Follow Us</h3>
+                <h3>Penyedia Layanan</h3>
                 <ul class="list-unstyled">
-                    <li><a href="https://github.com/shuyshuys/pemweb-uts-inball"><i class="fa-brands fa-github"></i> Github</a></li>
-                    <li><a href="https://www.infinityfree.net"><i class="fa-solid fa-infinity"></i> Infinity Free for hositng</a></li>
+                    <li><a href="https://github.com/shuyshuys/pemweb-uts-inball" style="text-decoration: none;"><i class="fa-brands fa-github"></i> Github for source code</a></li>
+                    <li><a href="https://www.infinityfree.net" style="text-decoration: none;"><i class="fa-solid fa-infinity"></i> Infinity Free for hositng</a></li>
+                    <li><a href="https://www.jagoanhosting.com/" style="text-decoration: none;"><i class="fa-solid fa-server"></i> Jagoan Hosting for domain</a></li>
                 </ul>
             </div>
         </div>
